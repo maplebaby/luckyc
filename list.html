@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>测试</title>
+	<link rel="icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/app.css" />
+	<style>
+		.sort-sticky {
+			transition: top 2s;
+			-moz-transition: top 2s; /* Firefox 4 */
+			-webkit-transition: top 2s; /* Safari 和 Chrome */
+			-o-transition: top 2s;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="app" id="app">
+		<div class="hd">
+			<a href="index.html" class="logo"></a>
+			
+			<a href="selectCity.html" class="select-city">Mumbai</a>
+			
+			<a href="publish.html" class="btn-sell">Sell</a>
+
+			<a href="userIndex.html" class="user"></a>
+		</div>
+
+		<div class="breadcrumb">
+			<a class="item" href="index.html">Home</a>
+			<span class="seq">&nbsp;</span>
+			<span class="item">Teen Party Octro</span>
+		</div>
+
+		<div class="bd">
+			<div class="sort-group-wrap">
+				<div class="sort-sticky">
+					<div class="sort-group">
+						<a href="javascript:;" class="sort-item" data-list="#J_AreaList">Area<i class="arrow"></i></a>
+						<a href="javascript:;" class="sort-item" data-list="#J_TypeList">Type<i class="arrow"></i></a>
+						<a href="javascript:;" class="sort-item" data-list="#J_PriceList">Price<i class="arrow"></i></a>
+						<a href="javascript:;" class="sort-item last" data-list="#J_SortList">Sort</a>
+					</div>
+
+					<!-- sort list -->
+					<div class="nav-list sort-list" id="J_AreaList">
+						<a href="javascript:;" class="item" data-key="area" data-value="Delhi">Delhi</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Mumbai">Mumbai</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Bangalore">Bangalore</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Chennai">Chennai</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Pune">Pune</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Kolkata">Kolkata</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Gurgaon">Gurgaon</a>
+						<a href="javascript:;" class="item" data-key="area" data-value="Ahmedabad">Ahmedabad</a>
+					</div>
+
+					<div class="nav-list sort-list" id="J_TypeList">
+						<a href="javascript:;" class="item" data-key="type" data-value="1">Coins</a>
+					</div>
+
+					<div class="nav-list sort-list" id="J_PriceList">
+						<a href="javascript:;" class="item" data-key="price" data-value="-1">All the price</a>
+						<a href="javascript:;" class="item" data-key="price" data-value="0-30">Under 30 rupees</a>
+						<a href="javascript:;" class="item" data-key="price" data-value="300-100">30 - 100 rupees</a>
+						<a href="javascript:;" class="item" data-key="price" data-value="100-300">101 - 300 rupees</a>
+						<a href="javascript:;" class="item" data-key="price" data-value="300-9999999">More than 300 rupees</a>
+					</div>
+
+					
+					<div class="nav-list sort-list" style="transition: top 2s;-moz-transition: top 2s; -webkit-transition: top 2s; -o-transition: width 2s;" id="J_SortList">
+						<a href="javascript:;" class="item" data-key="sort" data-value="time-asc">Time ↑</a>
+						<a href="javascript:;" class="item" data-key="sort" data-value="time-desc">Time ↓</a>
+						<a href="javascript:;" class="item" data-key="sort" data-value="price-asc">Price ↑</a>
+						<a href="javascript:;" class="item" data-key="sort" data-value="price-desc">Price ↓</a>
+						<a href="javascript:;" class="item" data-key="sort" data-value="unitPrice-asc">unit price ↑</a>
+						<a href="javascript:;" class="item" data-key="sort" data-value="unitPrice-desc">unit price ↓</a>
+					</div>
+					<!-- / sort list -->
+				</div>
+			</div>
+			
+			<div class="list">
+				<div class="empty">
+					<img src="img/bg/empty.png" width="94" height="117" alt="" class="empty-img" />
+					<p class="empty-message">
+						Hello, The current game goods temporarily is empty, please come back later!
+					</p>
+				</div>
+			</div>
+
+
+			<div id="J_List" class="list">
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+				
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+
+				<a href="detail.html" class="item">
+					<p class="item-price fn-right"><i class="money-sign"></i>500,000</p>
+					<p class="item-title">1000 coins</p>
+
+					<p class="item-rate"><span class="highlight">1 rupees = 2</span> coins</p>
+					<p class="item-info">coins - Delhi - 14/06/13</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="loading-wrap">
+			<div id="J_Loading" class="ui-loading"></div>
+		</div>
+
+		<div class="ft">
+			<div class="sub-nav">
+				<a href="index.html" class="nav-item">
+					<span class="icon-home"></span>
+					<span class="text">Home</span>
+				</a>
+				<a href="faq.html" class="nav-item">
+					<span class="icon-faq"></span>
+					<span class="text">FAQ</span>
+				</a>
+				<a href="feedback.html" class="nav-item last">
+					<span class="icon-feedback"></span>
+					<span class="text">Feedback</span>
+				</a>
+			</div>
+			<p class="copyright">Copyright &copy; 2014 Changyou.com</p>
+		</div>
+	</div>
+
+	<a href="javascript:;" id="J_BackTop" class="btn-back-top"></a>
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js?v=1000"></script>
+
+	<script>
+		$(function() {
+			var query = {
+				"page": 2
+			};
+			var loaded = true;
+
+			/**
+			 * 返回顶部
+			 */
+			var backTop = $('#J_BackTop');
+			backTop.bind("click", function() {
+				$("body, html").animate({
+					scrollTop: 0
+				}, 500);
+			});
+
+			$("#app").on('click', '.sort-item', function(e) {
+				e.preventDefault();
+				var elem = e.target.tagName=="I" ? $(e.target.parentNode) : $(e.target);
+
+				if(elem.length <= 0) { return; }
+
+				var allList = $(".sort-list");
+				var currentlist = $(elem.attr("data-list"));
+				
+
+				var mask = showMask();
+
+				$(".sort-sticky").css({
+					"position": "fixed",
+					"top": 0,
+					"zIndex": 101
+				});
+
+				elem.addClass("active").siblings(".sort-item").removeClass("active");
+
+				allList.hide();
+				currentlist.show();
+
+				/**
+				 * 筛选交互,同步刷新
+				 */
+				currentlist.on('click', '.item', function(e) {
+					var elem = $(e.target);
+					var key = elem.data("key");
+					var val = elem.data("value");
+
+					query[key] = val;
+
+					var map = parseUrl(location.href);
+					var queryStr = getQuery(query);
+
+					if(map["query"]) {
+						location.href = location.href.replace(map["query"], queryStr);
+					} else {
+						location.href += '?' + queryStr;
+					}
+				});
+				
+				/**
+				 * 取消筛选
+				 */
+				mask.bind("click", function(e) {
+					$(".sort-sticky").css({
+						"position": "relative"
+					});
+
+					elem.removeClass("active");
+					allList.hide();
+					hideMask();
+				});
+			});
+
+			$(window).bind("scroll", function(e) {
+				/**
+				 * 分页获取，异步刷新
+				 */
+				var bufferHeight = 70;
+
+				if($(document).scrollTop() >= 700) {
+					backTop.fadeIn();
+				} else {
+					backTop.fadeOut();
+				}
+				
+				if(($(document).scrollTop() + bufferHeight) >= ($(document).height() - $(window).height())) {
+					loaded && loadPage();
+				}
+			});
+
+			/**
+			 * 异步获取页面
+			 */
+			function loadPage() {
+				loaded = false;
+				$("#J_Loading").show();
+
+				$.get("data.html", query, function(html) {
+					setTimeout(function() {
+						$("#J_List").append($(html));
+						$("#J_Loading").hide();
+
+						if(query.page == 2) {
+							
+						}
+
+						query.page ++; //加页码
+
+						loaded = true;
+					}, 1000);
+				});
+			}
+
+			function getQuery(map) {
+				var arr = [];
+				for(var key in map) {
+					arr.push(key + '=' + map[key]);
+				}
+				return arr.join("&");
+			}
+		});
+	</script>
+</body>
+</html>

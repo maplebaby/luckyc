@@ -1,0 +1,175 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+@import "retina.less";
+
+// clearfix
+// ----------------
+.clearfix() {
+  *zoom: 1;
+  &:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    height: 0;
+    content: " ";
+    font-size: 0;
+  }
+}
+.fn-left() {
+  float: left;
+  display: inline;
+}
+.fn-right() {
+  float: right;
+  display: inline;
+}
+
+
+// Center-align a block level element
+// ----------------------------------
+.center-block() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+// inline-block
+// for block element
+// ----------------------------------
+.inline-block() {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+// IE6 min-height
+// ----------------------------------
+.min-height(@minHeight) {
+  min-height: @minHeight;
+  height: auto;
+  // _height: @minHeight;
+}
+.min-width(@minWidth) {
+  min-width: @minWidth;
+  width: auto;
+  // _width: @minWidth;
+}
+
+
+// CSS3 PROPERTIES
+// -----------------------------------
+
+
+// box
+// -------------------------
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.border-radius(@radius1, @radius2, @radius3, @radius4) {
+  -webkit-border-radius: @arguments;
+     -moz-border-radius: @arguments;
+          border-radius: @arguments;
+}
+.box-shadow(@left, @top, @length, @color) {
+  -webkit-border-shadow: @arguments;
+        -moz-box-shadow: @arguments;
+             box-shadow: @arguments;
+}
+.box-sizing(@type:content-box ) {
+  -moz-box-sizing: @type;
+  -webkit-box-sizing: @type;
+  -o-box-sizing: @type;
+  -ms-box-sizing: @type;
+  box-sizing: @type;
+}
+.transition(@prop, @t1, @t2) {
+  -webkit-transition: @prop @t1 linear @t2;
+  -moz-transition: @prop @t1 linear @t2;
+  -o-transition: @prop @t1 linear @t2;
+  transition: @prop @t1 linear @t2;
+}
+
+
+// background
+// -------------------------
+.background-origin(@type:content) {
+  -moz-background-origin: @type;
+  -webkit-background-origin: @type;
+  -o-background-origin: @type;
+  background-origin: @type;
+}
+.background-size(@width) {
+  -webkit-background-size: @width;
+  -o-background-size: @width;
+  background-size: @width;
+}
+.background-size(@width, @height) {
+  -webkit-background-size: @arguments;
+  -o-background-size: @arguments;
+  background-size: @arguments;
+}
+
+
+/**
+ * mobile 1px top border
+ * @author Maple
+ */
+.line-top() {
+  border: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dadada), color-stop(50%,#dadada), color-stop(50%,transparent));
+  background-image: -webkit-linear-gradient(top, #dadada 0, #dadada 50%, transparent 50%);
+  background-image: linear-gradient(to bottom, #dadada 0, #dadada 50%, transparent 50%);
+  -webkit-background-size: 100% 1px;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/**
+ * mobile 1px bottom border
+ * @author Maple
+ */
+.line-bottom(@color: #dadada) {
+  border: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(50%, transparent), color-stop(50%,@color));
+  background-image: -webkit-linear-gradient(top, transparent 0, transparent 50%, @color 50%);
+  background-image: linear-gradient(to bottom, transparen 0, transparen 50%,  @color 50%);
+  -webkit-background-size: 100% 1px;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/**
+ * mobile line separate
+ * @author Maple
+ */
+.line-right(@color: #dadada) {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, @color), color-stop(100%, @color));
+  background-image: -webkit-linear-gradient(left, transparent 50%, @color 50%, @color 100%);
+  background-image: linear-gradient(to right, transparent 50%, @color 50%, @color 100%);
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/**
+ * mobile line separate
+ * @author Maple
+ */
+.line-left(@color: #dadada) {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, transparent), color-stop(50%, @color), color-stop(100%, @color));
+  background-image: -webkit-linear-gradient(right, transparent 50%, @color 50%, @color 100%);
+  background-image: linear-gradient(to left, transparent 50%, @color 50%, @color 100%);
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+}

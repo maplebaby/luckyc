@@ -1,0 +1,29 @@
+/**
+ * 通用箭头
+ * @date 2013.10.30
+ * @author Maple
+ */
+.arrow() {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 0;
+	height: 0;
+	line-height: 0;	
+}
+.t-arrow(@width: 5px, @c-arrow: #999) {
+	.arrow();
+	border-width: @width;
+	border-color: transparent transparent @c-arrow transparent;
+	border-style: dashed dashed solid dashed;
+}
+.b-arrow(@width: 5px, @c-arrow: #999) {
+	.arrow();
+	border-width: @width;
+	border-color: @c-arrow transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+}
+.fn-inline-center {
+	display: inline-block;
+	vertical-align: middle;
+}

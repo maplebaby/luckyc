@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<meta name="apple-mobile-web-app-title" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>测试</title>
+	<link rel="icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+	
+	<div class="app" id="app">
+		<div class="hd">
+			<a href="index.html" class="logo"></a>
+			
+			<a href="selectCity.html" class="select-city">Mumbai</a>
+			
+			<a href="publish.html" class="btn-sell">Sell</a>
+
+			<a href="userIndex.html" class="user logged"></a>
+		</div>
+
+		<div class="breadcrumb">
+			<a class="item" href="">Home</a>
+			<span class="seq">&nbsp;</span>
+			<a class="item" href="">User</a>
+		</div>
+
+		<div class="bd bd-login">
+			<div class="picture-wrap">
+				<img src="img/bg/avatar.jpg" alt="" width="67" height="67" class="user-pic" />
+			</div>
+
+			<!-- <div class="action-wrap">
+				<a href="login.html" class="btn btn-red">Login</a>
+				<a href="register.html" class="btn btn-blue">Sign in</a>
+			</div> -->
+
+			<div class="account-wrap">
+				Welcome，<strong>${account!''}</strong>
+			</div>
+
+			<div class="nav-list">
+				<a href="myGoodsList.html" class="item">
+					<span class="icon icon-publish"></span>I release the goods
+				</a>
+				<a href="userInfo.html" class="item">
+					<span class="icon icon-person"></span>Personal infomation
+				</a>
+				<a href="messageList.html" class="item">
+					<span class="icon icon-message"></span>The letter station
+				</a>
+				<a href="feedback.html" class="item">
+					<span class="icon icon-feedback"></span>Feedback
+				</a>
+				<a href="#" class="item">
+					<span class="icon icon-logout"></span>Logout
+				</a>
+			</div>
+		</div>
+		
+		<div class="ft">
+			<div class="sub-nav">
+				<a href="#" class="nav-item">
+					<span class="icon-home"></span>
+					<span class="text">Home</span>
+				</a>
+				<a href="#" class="nav-item">
+					<span class="icon-faq"></span>
+					<span class="text">FAQ</span>
+				</a>
+				<a href="#" class="nav-item last">
+					<span class="icon-feedback"></span>
+					<span class="text">Feedback</span>
+				</a>
+			</div>
+			<p class="copyright">Copyright &copy; 2014 Changyou.com</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

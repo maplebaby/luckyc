@@ -1,0 +1,101 @@
+/**
+ * 文字排版
+ * @date 2013.04.15
+ * @author Maple
+ */
+@c-primary:         #005aa0;
+@c-success:         #5cb85c;
+@c-warning:         #f0ad4e;
+@c-danger:          #d9534f;
+@c-info:            #5bc0de;
+
+// -------------------
+// 文字超出宽度显示...
+// @date 2013.10.30
+// @add Maple
+// -------------------
+.text-ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+// -------------------
+// 通用文字提示色
+// @date 2013.10.30
+// @add Maple
+// -------------------
+.txt-primary {
+	color: @c-primary;
+}
+.txt-danger {
+	color: @c-danger;
+}
+.txt-success {
+	color: @c-success;
+}
+.txt-warning {
+	color: @c-warning;
+}
+.txt-info {
+	color: @c-info;
+}
+
+// -------------------
+// 文本对齐排版
+// @date 2013.10.30
+// @add Maple
+// -------------------
+.txt-left {
+	text-align: left;
+}
+.txt-right {
+	text-align: right;
+}
+.txt-center {
+	text-align: center;
+}
+.txt-middle {
+	vertical-align: middle;
+}
+
+// -------------------
+// 文字隐藏
+// @description 可用于图片button，利于SEO
+// @date 2013.10.30
+// @add Maple
+// -------------------
+.hide-text() {
+	font: ~"0/0" a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+.txt-hide {
+	.hide-text()
+}
+
+// ----------------
+// 字体设置
+// @description 字体变量太长不好记
+// @date 2013.12.26
+// @add Maple
+// ----------------
+.txt-xp {
+	font-family: @sansFontFamily;
+}
+.txt-win7 {
+	font-family: @sansFontFamily;
+}
+.txt-num {
+	font-family: @numberFontFamily;
+}
+
+.wrap() {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}

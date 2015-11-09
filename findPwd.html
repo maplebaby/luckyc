@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>测试</title>
+	<link rel="icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+	
+	<div class="app" id="app">
+		<div class="hd">
+			<div class="top-bar">
+				<a href="javascript:history.go(-1);" class="back"></a>
+				Find password
+			</div>
+		</div>
+
+		<div class="bd">
+			<div class="panel form-wrap">
+				<form action="findPwdResult.html" method="get">
+					<p class="find-pwd-title">
+						Please fill in your the email address when you reigister account. We will send a message to you email.
+					</p>
+
+					<div class="tip-wrap">
+						<p class="tip tip-error">The password can not be empty!</p>
+					</div>
+
+					<div class="item">
+						<input type="text" class="input" placeholder="email" />
+						<p class="message"></p>
+					</div>
+
+					<button class="btn btn-blue fn-mt30">Send</button>
+				</form>
+				
+			</div>
+		</div>
+		
+		<div class="ft">
+			<div class="sub-nav">
+				<a href="#" class="nav-item">
+					<span class="icon-home"></span>
+					<span class="text">Home</span>
+				</a>
+				<a href="#" class="nav-item">
+					<span class="icon-faq"></span>
+					<span class="text">FAQ</span>
+				</a>
+				<a href="#" class="nav-item last">
+					<span class="icon-feedback"></span>
+					<span class="text">Feedback</span>
+				</a>
+			</div>
+			<p class="copyright">Copyright &copy; 2014 Changyou.com</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script>
+		(function($) {
+			var dist = {
+				"email empty": "email can't be empty.",
+				"email syntax error": "email syntax error",
+				"password empty": "password can't be empty.",
+				"password too short": "the length of password is too short."
+			};
+
+			$("input").clearInput();
+
+
+			$("#J_Login").bind("click", function() {
+				var email = $("#J_Email");
+				var password = $("#J_Password");
+
+				// email empty
+				if(email && email.val()=="") {
+					showError(dist["email empty"]);
+					return;
+				}
+
+				// email syntax error
+				if(!isEmail(email.val())) {
+					showError(dist["email syntax error"]);
+					return;
+				}
+
+				// password empty
+				if(password && password.val()=="") {
+					showError(dist["password empty"]);
+					return;
+				}
+
+				// the length of password is too short
+				if(password.val().length <=4) {
+					showError(dist["password too short"]);
+					return;
+				}
+
+				hideError();
+
+				// submit form
+
+			});
+
+		})(jQuery);
+	</script>
+</body>
+</html>
